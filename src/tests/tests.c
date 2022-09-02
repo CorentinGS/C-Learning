@@ -15,10 +15,6 @@ void test_linked_list_to_array();
 void test_insert_at_head();
 void test_insert_at_end();
 
-#define ANSI_COLOR_GREEN   "\x1b[32m"
-#define ANSI_COLOR_RESET   "\x1b[0m"
-#define ANSI_COLOR_YELLOW "\x1b[33m"
-
 void tests () {
     printf(ANSI_COLOR_YELLOW"➡️ utils functions....."ANSI_COLOR_RESET);
     sum_testing();

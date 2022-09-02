@@ -7,6 +7,7 @@
 
 #include "utils_test.h"
 #include "../linked_list/linked_list.h"
+#include "../utils/colors.h"
 
 extern void tests();
 
