@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 #include <assert.h>
-#include <malloc.h>
 #include "tests.h"
 
 #define LEN(x)  (sizeof(x) / sizeof((x)[0]))
@@ -16,14 +15,22 @@ void test_linked_list_to_array();
 void test_insert_at_head();
 void test_insert_at_end();
 
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+#define ANSI_COLOR_YELLOW "\x1b[33m"
 
 void tests () {
-    // sum_testing();
+    printf(ANSI_COLOR_YELLOW"➡️ utils functions....."ANSI_COLOR_RESET);
+    sum_testing();
+    printf(ANSI_COLOR_GREEN "OK \n" ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_YELLOW"➡️ linked list........."ANSI_COLOR_RESET);
     test_create_linked_list();
     test_linked_list_to_array();
     test_linked_list_size();
     test_insert_at_head();
     test_insert_at_end();
+    printf(ANSI_COLOR_GREEN "OK \n" ANSI_COLOR_RESET);
+
 }
 
 void test_create_linked_list() {
