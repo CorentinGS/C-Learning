@@ -8,5 +8,8 @@
 #include "../utils/utils.h"
 
 extern int sum_testing();
+extern int test_division();
+extern int test_min();
+extern int test_max();
 
 #endif //C_UTILS_TEST_H

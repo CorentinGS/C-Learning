@@ -6,7 +6,8 @@
 #define C_TESTS_H
 
 #include "utils_test.h"
-#include "../linked_list/linked_list.h"
+#include "linked_list_test.h"
+
 #include "../utils/colors.h"
 
 extern void tests();
