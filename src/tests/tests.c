@@ -5,16 +5,19 @@
 #include <stdio.h>
 #include "tests.h"
 #include "ds_td/td1_test.h"
+#include "sort/merge_sort_test.h"
 
 
 void test_utils();
 void test_linked_list();
 void test_ds_td();
+void test_sort();
 
-void tests () {
+ void tests () {
     test_utils();
     test_linked_list();
     test_ds_td();
+    test_sort();
 }
 
 void test_utils(){
@@ -40,7 +43,12 @@ void test_ds_td() {
     printf(ANSI_COLOR_YELLOW"➡️ Data Structure TD..."ANSI_COLOR_RESET);
     test_td1();
     printf(ANSI_COLOR_GREEN "OK \n" ANSI_COLOR_RESET);
+}
 
+void test_sort() {
+    printf(ANSI_COLOR_YELLOW"➡️ Sorting............."ANSI_COLOR_RESET);
+    test_merge_sort();
+    printf(ANSI_COLOR_GREEN "OK \n" ANSI_COLOR_RESET);
 }
 
 

@@ -4,14 +4,12 @@
 #include "main.h"
 #include "utils/enum.h"
 #include "ds_td/td1.h"
+#include "sort/merge_sort.h"
 
 int debug_mode = 0;
 
 int main() {
     init();
-
-    char string[] = "Hello World!";
-    PrintStringWhile(string, LEN(string));
 
     return 0;
 }
