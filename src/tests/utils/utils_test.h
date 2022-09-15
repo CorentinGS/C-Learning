@@ -5,7 +5,7 @@
 #ifndef C_UTILS_TEST_H
 #define C_UTILS_TEST_H
 
-#include "../utils/utils.h"
+#include "../../utils/utils.h"
 
 extern int sum_testing();
 extern int test_division();

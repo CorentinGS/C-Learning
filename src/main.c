@@ -3,16 +3,18 @@
 #include <string.h>
 #include "main.h"
 #include "utils/enum.h"
+#include "ds_td/td1.h"
 
 int debug_mode = 0;
 
-
 int main() {
     init();
+
+    char string[] = "Hello World!";
+    PrintStringWhile(string, LEN(string));
+
     return 0;
 }
-
-
 
 int get_debug_mode() {
     char *debug = getenv("DEBUG_MODE");

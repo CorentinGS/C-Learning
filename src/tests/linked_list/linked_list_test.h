@@ -13,7 +13,7 @@ void test_insert_at_end();
 
 #define LEN(x)  (sizeof(x) / sizeof((x)[0]))
 
-#include "../linked_list/linked_list.h"
+#include "../../linked_list/linked_list.h"
 
 
 #endif //C_LINKED_LIST_TEST_H
