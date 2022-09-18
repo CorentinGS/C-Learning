@@ -48,6 +48,8 @@ void test_ds_td() {
 void test_sort() {
     printf(ANSI_COLOR_YELLOW"➡️ Sorting............."ANSI_COLOR_RESET);
     test_merge_sort();
+    test_merge_sort_random();
+    benchmark_merge_sort();
     printf(ANSI_COLOR_GREEN "OK \n" ANSI_COLOR_RESET);
 }
 

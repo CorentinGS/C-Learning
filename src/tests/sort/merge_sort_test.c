@@ -3,6 +3,9 @@
 //
 
 #include <assert.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 #include "merge_sort_test.h"
 #include "../../sort/merge_sort.h"
 
@@ -28,4 +31,34 @@ void test_merge_sort() {
         assert(array3[i] == sorted_array3[i]);
     }
 
+}
+
+void test_merge_sort_random() {
+    int SIZE = 100000;
+    srand(time(0));
+    int array[SIZE];
+    for (int i = 0; i < SIZE; ++i) {
+        array[i] = rand() % SIZE;
+    }
+
+    MergeSort(array, 0, SIZE);
+    for (int i = 0; i < SIZE-1; ++i) {
+        assert(array[i] <= array[i+1]);
+    }
+}
+
+void benchmark_merge_sort() {
+    int SIZE = 1000000;
+    int ARRAY_SIZE = 100000;
+    srand(time(0));
+    int array[ARRAY_SIZE];
+    for (int i = 0; i < ARRAY_SIZE; ++i) {
+        array[i] = rand() % SIZE;
+    }
+
+    clock_t start = clock();
+    MergeSort(array, 0, ARRAY_SIZE);
+    clock_t end = clock();
+    double time = (double)(end - start) / CLOCKS_PER_SEC;
+    printf("\nMerge sort took %f seconds to sort %d numbers (randomly generated) using merge sort....", time, ARRAY_SIZE);
 }

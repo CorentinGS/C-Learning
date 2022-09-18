@@ -6,5 +6,7 @@
 #define C_MERGE_SORT_TEST_H
 
 extern void test_merge_sort();
+extern void test_merge_sort_random();
+extern void benchmark_merge_sort();
 
 #endif //C_MERGE_SORT_TEST_H
