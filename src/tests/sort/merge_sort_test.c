@@ -49,7 +49,7 @@ void test_merge_sort_random() {
 
 void benchmark_merge_sort() {
     int SIZE = 1000000;
-    int ARRAY_SIZE = 100000;
+    int ARRAY_SIZE = 1000000;
     srand(time(0));
     int array[ARRAY_SIZE];
     for (int i = 0; i < ARRAY_SIZE; ++i) {
