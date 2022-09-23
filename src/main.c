@@ -5,12 +5,12 @@
 #include "utils/enum.h"
 #include "ds_td/td1.h"
 #include "sort/merge_sort.h"
+#include "exercices/pyramide.h"
 
 int debug_mode = 0;
 
 int main() {
     init();
-
     return 0;
 }
 
