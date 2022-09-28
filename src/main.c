@@ -6,8 +6,10 @@
 #include "ds_td/td1.h"
 #include "sort/merge_sort.h"
 #include "exercices/pyramide.h"
+#include "benchmark/sort_benchmark.h"
 
 int debug_mode = 0;
+int benchmark_mode = 1;
 
 int main() {
     init();
@@ -36,6 +38,11 @@ void init() {
         tests();
         printf("--------------------------------\n");
         printf(ANSI_COLOR_GREEN "Tests finished with no errors ✅\n" ANSI_COLOR_RESET);
+        printf("--------------------------------\n");
+        if (benchmark_mode == 1) {
+            printf(ANSI_COLOR_RED "Running benchmark ⤵️\n" ANSI_COLOR_RESET);
+            benchmark();
+        }
     } else {
         printf(ANSI_COLOR_BLUE "Release mode\n" ANSI_COLOR_RESET);
         printf("--------------------------------\n");

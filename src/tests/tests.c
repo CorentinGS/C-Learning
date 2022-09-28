@@ -7,6 +7,7 @@
 #include "ds_td/td1_test.h"
 #include "sort/merge_sort_test.h"
 #include "exercices/pyramide_test.h"
+#include "sort/sort_test.h"
 
 
 void test_utils();
@@ -52,6 +53,13 @@ void test_sort() {
     printf(ANSI_COLOR_YELLOW"➡️ Sorting............."ANSI_COLOR_RESET);
     test_merge_sort();
     test_merge_sort_random();
+    test_insertion_sort();
+    test_selection_sort();
+    test_heap_sort();
+    test_revert_heap_sort();
+    test_matrix_sort();
+    test_bubble_sort();
+    test_counting_sort();
     // benchmark_merge_sort();
     printf(ANSI_COLOR_GREEN "OK \n" ANSI_COLOR_RESET);
 }
