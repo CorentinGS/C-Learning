@@ -7,12 +7,14 @@
 #include "sort/merge_sort.h"
 #include "exercices/pyramide.h"
 #include "benchmark/sort_benchmark.h"
+#include "exercices/sdd_2019.h"
 
 int debug_mode = 0;
 int benchmark_mode = 1;
 
 int main() {
-    init();
+    exo_sdd_2019();
+    //init();
     return 0;
 }
 
