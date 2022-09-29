@@ -37,7 +37,6 @@ void SelectionSort(int* array, int size) {
         if (min != i) {
             Swap(array, i, min);
         }
-
     }
 }
 
