@@ -21,7 +21,7 @@ void InsertionSort(int* array, int size) {
         int j = i;
         while (j > 0 && array[j] < array[j-1]) {
             Swap(array, j, j-1);
-            j--;
+            --j;
         }
     }
 }
