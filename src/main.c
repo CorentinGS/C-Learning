@@ -3,13 +3,9 @@
 #include <string.h>
 #include "main.h"
 #include "utils/enum.h"
-#include "ds_td/td1.h"
-#include "sort/merge_sort.h"
-#include "exercices/pyramide.h"
 #include "benchmark/sort_benchmark.h"
 #include "exercices/sdd_2019.h"
 #include "ds_td/td3.h"
-#include "sort/sort.h"
 
 int debug_mode = 0;
 int benchmark_mode = 1;
