@@ -29,16 +29,33 @@ void tri_interstion() {
     int up = 0;
     for (int i=1; i < n; ++i) {
         int x = T[i];
+        ++up;
         int j = i;
         while (j > 0 && T[j-1] > x) {
             T[j] = T[j-1];
-            --j;
             ++up;
-            print_array(T, n);
+            --j;
         }
         T[j] = x;
-        print_array(T, n);
         ++up;
+    }
+    printf("up = %d", up);
+}
+
+void tri_insertion_swap() {
+
+    int n = 7;
+    int T[7] = {10,2,3,9,8,7,12};
+    int up = 0;
+    for (int i=1; i < n; ++i) {
+        int j = i;
+        while (j > 0 && T[j] < T[j-1]) {
+            int tmp = T[j];
+            T[j] = T[j-1];
+            T[j-1] = tmp;
+            --j;
+            up += 3;
+        }
     }
     printf("up = %d", up);
 }

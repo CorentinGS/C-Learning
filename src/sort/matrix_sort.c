@@ -7,7 +7,6 @@
 
 
 void MatrixSort(int* matrix, int size_row, int size_col) {
-
     int* array = malloc(sizeof(int) * size_row * size_col);
     int index = 0;
     for (int i = 0; i < size_row; ++i) {
@@ -22,5 +21,4 @@ void MatrixSort(int* matrix, int size_row, int size_col) {
             matrix[i*size_col + j] = array[index++];
         }
     }
-
 }

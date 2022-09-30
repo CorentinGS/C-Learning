@@ -28,11 +28,11 @@ void Merge(int arr[], int l, int m, int r) {
     int R[nR];
 
     // Copy the data to the temp arrays
-    for (int i = 0; i < nL; i++) {
+    for (int i = 0; i < nL; ++i) {
         L[i] = arr[l+i];
     }
 
-    for (int j = 0;j<nR; j++) {
+    for (int j = 0;j<nR; ++j) {
         R[j] = arr[m+j+1];
     }
 

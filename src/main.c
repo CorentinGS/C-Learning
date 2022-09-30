@@ -8,12 +8,17 @@
 #include "exercices/pyramide.h"
 #include "benchmark/sort_benchmark.h"
 #include "exercices/sdd_2019.h"
+#include "ds_td/td3.h"
+#include "sort/sort.h"
 
 int debug_mode = 0;
 int benchmark_mode = 1;
 
 int main() {
-    exo_sdd_2019();
+    td3();
+    tri_interstion();
+    printf("\n");
+    tri_insertion_swap();
     //init();
     return 0;
 }
