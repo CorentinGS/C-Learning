@@ -10,6 +10,6 @@
 
 #include "../utils/colors.h"
 
-extern void tests();
+extern void tests(void);
 
 #endif //C_TESTS_H

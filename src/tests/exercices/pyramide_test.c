@@ -7,7 +7,8 @@
 #include "pyramide_test.h"
 #include "../../exercices/pyramide.h"
 
-void test_fill_pyramide() {
+void
+test_fill_pyramide(void) {
     int size = 5;
     int* pyramide = malloc(sizeof(int) * size * (size + 1) / 2);
     int result[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
@@ -33,7 +34,8 @@ void test_fill_pyramide() {
     }
 }
 
-void test_find_row_col() {
+void
+test_find_row_col(void) {
     int size = 5;
     int* pyramide = malloc(sizeof(int) * size * (size + 1) / 2);
     fill_pyramide(pyramide, size);

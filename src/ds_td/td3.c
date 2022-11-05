@@ -6,8 +6,8 @@
 #include <malloc.h>
 #include "td3.h"
 
-
-void td3(void) {
+void
+td3(void) {
     printf("TD3\n");
     int array[5] = {0, 2, 4, 6, 8};
     update_sorted_array(array, 5, 3, 3);
@@ -67,7 +67,8 @@ void td3(void) {
  *    -> O(1) dans le meilleur cas (si on insère à la bonne place)
  *    -> O(n) dans le cas moyen
  */
-void update_sorted_array(int *array, int size, int value, int index) {
+void
+update_sorted_array(int* array, int size, int value, int index) {
     printf("Exercice 3.1\n");
     printf("Insertion de %d à l'index %d\n", value, index);
     // We change the value at the given index to the given value and we shift the other values to sort the array
@@ -95,6 +96,7 @@ void update_sorted_array(int *array, int size, int value, int index) {
         printf("%d ", array[i]);
     }
 }
+
 // ----------------------------------- Ex 3.2 -----------------------------------
 /*
  * Ex 3.2
@@ -126,7 +128,8 @@ void update_sorted_array(int *array, int size, int value, int index) {
  *  On doit faire n comparaisons pour chaque élément, donc O(n²)
 
  */
-void selection_sort(int * array, int size) {
+void
+selection_sort(int* array, int size) {
     for (int i = 0; i < size; ++i) {
         int min = i;
         for (int j = i + 1; j < size; ++j) {

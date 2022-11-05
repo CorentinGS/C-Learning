@@ -7,9 +7,9 @@
 
 #include "../../utils/utils.h"
 
-extern int sum_testing();
-extern int test_division();
-extern int test_min();
-extern int test_max();
+extern int sum_testing(void);
+extern int test_division(void);
+extern int test_min(void);
+extern int test_max(void);
 
 #endif //C_UTILS_TEST_H

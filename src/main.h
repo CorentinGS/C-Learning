@@ -8,7 +8,7 @@
 #include "common.h"
 #include "tests/tests.h"
 
-int get_debug_mode();
-void init();
+int get_debug_mode(void);
+void init(void);
 
 #endif //C_MAIN_H

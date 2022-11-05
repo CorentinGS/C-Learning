@@ -9,7 +9,8 @@
 #include "merge_sort_test.h"
 #include "../../sort/merge_sort.h"
 
-void test_merge_sort() {
+void
+test_merge_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
@@ -30,10 +31,10 @@ void test_merge_sort() {
     for (int i = 0; i < 15; ++i) {
         assert(array3[i] == sorted_array3[i]);
     }
-
 }
 
-void test_merge_sort_random() {
+void
+test_merge_sort_random(void) {
     int SIZE = 100000;
     srand(time(0));
     int array[SIZE];
@@ -42,8 +43,7 @@ void test_merge_sort_random() {
     }
 
     MergeSort(array, 0, SIZE);
-    for (int i = 0; i < SIZE-1; ++i) {
-        assert(array[i] <= array[i+1]);
+    for (int i = 0; i < SIZE - 1; ++i) {
+        assert(array[i] <= array[i + 1]);
     }
 }
-

@@ -6,7 +6,7 @@
 #define C_PYRAMIDE_H
 
 void display_pyramide(int* pyramide, int size);
-extern int pyramide();
+extern int pyramide(void);
 void fill_pyramide(int* pyramide, int size);
 int find_row_col(int* pyramide, int size, int row, int col);
 

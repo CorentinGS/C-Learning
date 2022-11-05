@@ -11,6 +11,7 @@ void benchmark_heap_sort(int size);
 void benchmark_merge_sort(int size);
 void benchmark_bubble_sort(int size);
 void benchmark_counting_sort(int size);
-extern void benchmark();
+
+extern void benchmark(void);
 
 #endif //C_SORT_BENCHMARK_H

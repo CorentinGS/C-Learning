@@ -5,7 +5,8 @@
 #include "utils_test.h"
 #include "assert.h"
 
-int sum_testing() {
+int
+sum_testing(void) {
     assert(sum(1, 2) == 3);
     assert(sum(2, 3) == 5);
     assert(sum(3, 4) == 7);
@@ -13,7 +14,8 @@ int sum_testing() {
     return 0;
 }
 
-int test_division() {
+int
+test_division(void) {
     assert(division(6, 2) == 3);
     assert(division(6, 3) == 2);
     assert(division(6, 4) == 1);
@@ -21,7 +23,8 @@ int test_division() {
     return 0;
 }
 
-int test_min() {
+int
+test_min(void) {
     assert(min(1, 2) == 1);
     assert(min(0, 0) == 0);
     assert(min(0, 1) == 0);
@@ -31,7 +34,8 @@ int test_min() {
     return 0;
 }
 
-int test_max() {
+int
+test_max(void) {
     assert(max(1, 2) == 2);
     assert(max(2, 3) == 3);
     assert(max(3, 4) == 4);
@@ -40,4 +44,3 @@ int test_max() {
     assert(max(4, 5) == 5);
     return 0;
 }
-

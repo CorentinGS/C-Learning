@@ -5,8 +5,8 @@
 #ifndef C_TD1_H
 #define C_TD1_H
 
-extern int smallestElement(const int *array, int size);
-extern int getMinIndex(const int *array, int size);
+extern int smallestElement(const int* array, int size);
+extern int getMinIndex(const int* array, int size);
 extern int getMinIndexBetween(const int array[], int size, int lo, int hi);
 extern int SumArray(const int array[], int size);
 extern int AverageArray(const int array[], int size);

@@ -7,8 +7,6 @@
 
 #include "../../ds_td/td1.h"
 
-
-extern int test_td1();
+extern int test_td1(void);
 
 #endif //C_TD1_TEST_H
-

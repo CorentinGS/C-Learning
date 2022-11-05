@@ -7,7 +7,8 @@
 #include "sort_test.h"
 #include "../../sort/sort.h"
 
-void test_insertion_sort() {
+void
+test_insertion_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
@@ -30,7 +31,8 @@ void test_insertion_sort() {
     }
 }
 
-void test_selection_sort() {
+void
+test_selection_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
@@ -53,7 +55,8 @@ void test_selection_sort() {
     }
 }
 
-void test_heap_sort() {
+void
+test_heap_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
@@ -76,7 +79,8 @@ void test_heap_sort() {
     }
 }
 
-void test_revert_heap_sort() {
+void
+test_revert_heap_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
@@ -99,27 +103,21 @@ void test_revert_heap_sort() {
     }
 }
 
-void test_matrix_sort() {
+void
+test_matrix_sort(void) {
 
     int matrix[3][3] = {{7, 8, 9}, {4, 5, 6}, {1, 2, 3}};
     int matrix2[5][5] = {
-            {25, 24, 23, 22, 21},
-            {20, 19, 18, 17, 16},
-            {15, 14, 13, 12, 11},
-            {10, 9, 8, 7, 6},
-            {5, 4, 3, 2, 1}
-    };
-    int matrix3[5][10] = {
-            {50, 49, 48, 47, 46, 45, 44, 43, 42, 41},
-            {40, 39, 38, 37, 36, 35, 34, 33, 32, 31},
-            {30, 29, 28, 27, 26, 25, 24, 23, 22, 21},
-            {20, 19, 18, 17, 16, 15, 14, 13, 12, 11},
-            {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
-    };
+        {25, 24, 23, 22, 21}, {20, 19, 18, 17, 16}, {15, 14, 13, 12, 11}, {10, 9, 8, 7, 6}, {5, 4, 3, 2, 1}};
+    int matrix3[5][10] = {{50, 49, 48, 47, 46, 45, 44, 43, 42, 41},
+                          {40, 39, 38, 37, 36, 35, 34, 33, 32, 31},
+                          {30, 29, 28, 27, 26, 25, 24, 23, 22, 21},
+                          {20, 19, 18, 17, 16, 15, 14, 13, 12, 11},
+                          {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}};
 
-    MatrixSort((int *) matrix, 3, 3);
-    MatrixSort((int *) matrix2, 5, 5);
-    MatrixSort((int *) matrix3, 5, 10);
+    MatrixSort((int*)matrix, 3, 3);
+    MatrixSort((int*)matrix2, 5, 5);
+    MatrixSort((int*)matrix3, 5, 10);
 
     int sorted_matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     for (int i = 0; i < 3; ++i) {
@@ -129,25 +127,18 @@ void test_matrix_sort() {
     }
 
     int sorted_matrix2[5][5] = {
-            {1, 2, 3, 4, 5},
-            {6, 7, 8, 9, 10},
-            {11, 12, 13, 14, 15},
-            {16, 17, 18, 19, 20},
-            {21, 22, 23, 24, 25}
-    };
+        {1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}, {21, 22, 23, 24, 25}};
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 5; ++j) {
             assert(matrix2[i][j] == sorted_matrix2[i][j]);
         }
     }
 
-    int sorted_matrix3[5][10] = {
-            {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-            {11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
-            {21, 22, 23, 24, 25, 26, 27, 28, 29, 30},
-            {31, 32, 33, 34, 35, 36, 37, 38, 39, 40},
-            {41, 42, 43, 44, 45, 46, 47, 48, 49, 50}
-    };
+    int sorted_matrix3[5][10] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+                                 {11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
+                                 {21, 22, 23, 24, 25, 26, 27, 28, 29, 30},
+                                 {31, 32, 33, 34, 35, 36, 37, 38, 39, 40},
+                                 {41, 42, 43, 44, 45, 46, 47, 48, 49, 50}};
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 10; ++j) {
             assert(matrix3[i][j] == sorted_matrix3[i][j]);
@@ -155,7 +146,8 @@ void test_matrix_sort() {
     }
 }
 
-void test_bubble_sort() {
+void
+test_bubble_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
@@ -178,7 +170,8 @@ void test_bubble_sort() {
     }
 }
 
-void test_counting_sort() {
+void
+test_counting_sort(void) {
     int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int array2[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     int array3[15] = {4, 6, 1, 2, 3, 48, 5, 4, 6, 5, 8, 2, 14, 69, 4};
