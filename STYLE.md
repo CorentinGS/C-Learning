@@ -267,3 +267,10 @@ typedef enum MyEnum {
     /* ... */
 } my_enum_t;
 ```
+
+
+## Inspiration
+
+* [Educative](https://www.educative.io)
+* [@MaJerle](https://github.com/MaJerle/c-code-style)
+* [@Tmatis](https://github.com/tmatis/42make/blob/master/Makefile)
