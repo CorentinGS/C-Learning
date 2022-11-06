@@ -4,6 +4,7 @@
 #include "main.h"
 #include "utils/enum.h"
 #include "benchmark/sort_benchmark.h"
+#include "exercices/pyramide.h"
 
 int debug_mode = 0;
 int benchmark_mode = 0;
@@ -47,5 +48,6 @@ init(void) {
         printf(ANSI_COLOR_BLUE "Release mode\n" ANSI_COLOR_RESET);
         printf("--------------------------------\n");
         printf("Running main...\n");
+        pyramide();
     }
 }

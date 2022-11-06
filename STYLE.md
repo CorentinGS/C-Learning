@@ -225,6 +225,50 @@ void myFunction(int size) {
 }
 ```
 
+* Protect `malloc` against NULL
+
+```c
+/* Bad */
+int* myArray = malloc(sizeof(*myArray) * size);
+
+/* Good */
+int* myArray = malloc(sizeof(*myArray) * size);
+if (myArray == NULL) {
+    /* Handle error */
+}
+
+/* Good Short */
+if (!(matrix = malloc(sizeof(int) * 9))) {
+    /* Handle error */
+}
+```
+
+* Protect `free` against NULL
+
+```c
+/* Bad */
+free(myArray);
+
+/* Good */
+if (myArray != NULL) {
+    free(myArray);
+}
+```
+
+* Use `assert` for debugging purposes.
+
+```c
+/* Bad */
+if (myArray == NULL) {
+    /* Handle error and print a message */
+}
+
+/* Good */
+assert(myArray != NULL);
+```
+
+
+
 * Prefer `switch` over `if` when possible.
 * Prefer `for` over `while` when possible.
 
@@ -268,9 +312,95 @@ typedef enum MyEnum {
 } my_enum_t;
 ```
 
+### Macros 
+
+* Use `#define` for constants.
+* Use `#define` for macros.
+* Protect macros using parentheses
+```c
+#define MY_MACRO(x) ((x) + 1)
+``` 
+
+* Protect macros using do-while
+```c
+#define MY_MACRO(x) do { \
+    (x) = (x) + 1; \
+} while (0)
+```
+
+## Snippets I like
+
+### Basic
+
+* `for` loop
+
+```c
+for (size_t i = 0; i < 10; ++i) {
+    /* ... */
+}
+```
+
+* `while` loop using `for`
+
+```c
+size_t i = 0;
+for (; i < 10; ++i) {
+    /* ... */
+}
+
+/* or */
+
+for (size_t i = 0; i < 10; ) {
+    /* ... */
+    ++i;
+}
+```
+
+* forever loop
+
+```c
+# define forever for (;;)
+
+forever {
+    /* ... */
+    }
+```
+
+### Binary operations
+
+* Swap two variables
+
+```c
+#define SWAPP(a, b) do { \
+    a ^= b; \
+    b ^= a; \
+    a ^= b; \
+} while (0)
+
+/* or */
+
+#define SWAP(a, b) (((a) ^ (b)) && ((b) ^= (a) ^= (b), (a) ^= (b)))
+```
+
+### Strings 
+
+* ToLower 
+    
+```c
+#define TOLOWER(c) ((c) | 0x20)
+/* 0x20 = 0010 0000  = 32 */
+
+/* or */
+
+#define IS_UPPER_CASE(c) ((c) - 'A' <= 'Z' - 'A')
+#define TOLOWER(c) (IS_UPPER_CASE(c) ? (c) | 0b100000 : (c))
+```
+
+
 
 ## Inspiration
 
 * [Educative](https://www.educative.io)
 * [@MaJerle](https://github.com/MaJerle/c-code-style)
 * [@Tmatis](https://github.com/tmatis/42make/blob/master/Makefile)
+* [Awesome Competitive Programming](https://github.com/lnishan/awesome-competitive-programming)
