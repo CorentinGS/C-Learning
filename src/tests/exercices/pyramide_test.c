@@ -17,6 +17,10 @@ test_fill_pyramide(void) {
         assert(pyramide[i] == result[i]);
     }
 
+    if (NULL != pyramide) {
+        free(pyramide);
+    }
+
     int size2 = 3;
     int* pyramide2 = malloc(sizeof(int) * size2 * (size2 + 1) / 2);
     int result2[] = {1, 2, 3, 4, 5, 6};
@@ -25,12 +29,20 @@ test_fill_pyramide(void) {
         assert(pyramide2[i] == result2[i]);
     }
 
+    if (NULL != pyramide2) {
+        free(pyramide2);
+    }
+
     int size3 = 1;
     int* pyramide3 = malloc(sizeof(int) * size3 * (size3 + 1) / 2);
     int result3[] = {1};
     fill_pyramide(pyramide3, size3);
     for (int i = 0; i < size3 * (size3 + 1) / 2; ++i) {
         assert(pyramide3[i] == result3[i]);
+    }
+
+    if (NULL != pyramide3) {
+        free(pyramide3);
     }
 }
 
@@ -59,4 +71,8 @@ test_find_row_col(void) {
     assert(find_row_col(pyramide, size, 2, 3) == -1);
     assert(find_row_col(pyramide, size, 0, 0) == -1);
     assert(find_row_col(pyramide, size, -1, -1) == -1);
+
+    if (NULL != pyramide) {
+        free(pyramide);
+    }
 }

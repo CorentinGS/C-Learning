@@ -29,8 +29,9 @@ struct Node*
 create_linked_list(int* values, size_t size) {
     struct Node* head = NULL;
     struct Node* tail = NULL;
+    struct Node* node;
     for (size_t i = 0; i < size; ++i) {
-        struct Node* node = create_node(values[i]);
+        node = create_node(values[i]);
         if (NULL == head) {
             head = node;
             head->next = tail;
@@ -39,7 +40,9 @@ create_linked_list(int* values, size_t size) {
         }
         tail = node;
     }
+
     return head;
+
 }
 
 void

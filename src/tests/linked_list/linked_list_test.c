@@ -4,6 +4,7 @@
 
 #include <stddef.h>
 #include <assert.h>
+#include <malloc.h>
 #include "linked_list_test.h"
 
 void
@@ -40,6 +41,9 @@ test_linked_list_to_array(void) {
         assert(array[i] == initial_array[i]);
     }
     free_linked_list(head);
+    if (array != NULL) {
+        free(array);
+    }
 }
 
 void

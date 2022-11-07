@@ -33,4 +33,8 @@ MatrixSort(int* matrix, int size_row, int size_col) {
             matrix[i * size_col + j] = array[index++];
         }
     }
+
+    if (NULL != array) {
+        free(array);
+    }
 }
