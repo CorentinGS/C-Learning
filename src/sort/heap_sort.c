@@ -1,8 +1,20 @@
-//
-// Created by yume on 28/09/22.
-//
 
-#include <stdio.h>
+
+/******************************************************************************
+ * Copyright (c) 2022.                                                        *
+ *                                                                            *
+ *                                                                            *
+ * Learning C                             ______   _______      _______.      *
+ * heap_sort.c                           /      | /  _____|    /       |      *
+ *                                      |  ,----'|  |  __     |   (----`      *
+ * By: CorentinGS                       |  |     |  | |_ |     \   \          *
+ * <c.giaufersaubert@outlook.com>       |  `----.|  |__| | .----)   |         *
+ *                                       \______| \______| |_______/  (_/ -/  *
+ * LICENCE: MIT                                                        /  /   *
+ * Created: 2022/11/7 by CorentinGS                                           *
+ *                                                                            *
+ ******************************************************************************/
+
 #include "sort.h"
 
 void Heapify(int* array, int size, int i);
