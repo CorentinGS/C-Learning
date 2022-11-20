@@ -394,6 +394,25 @@ forever {
 
 #define IS_UPPER_CASE(c) ((c) - 'A' <= 'Z' - 'A')
 #define TOLOWER(c) (IS_UPPER_CASE(c) ? (c) | 0b100000 : (c))
+
+/* or */
+
+#define TOLOWER(c) ((c) | ' ')
+```
+
+* ToUpper
+
+```c
+#define TOUPPER(c) ((c) & ~0x20)
+
+/* or */
+
+#define IS_LOWER_CASE(c) ((c) - 'a' <= 'z' - 'a')
+#define TOUPPER(c) (IS_LOWER_CASE(c) ? (c) & ~0b100000 : (c))
+
+/* or */
+
+#define TOUPPER(c) ((c) & '_')
 ```
 
 
