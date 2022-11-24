@@ -267,8 +267,6 @@ if (myArray == NULL) {
 assert(myArray != NULL);
 ```
 
-
-
 * Prefer `switch` over `if` when possible.
 * Prefer `for` over `while` when possible.
 
@@ -312,16 +310,18 @@ typedef enum MyEnum {
 } my_enum_t;
 ```
 
-### Macros 
+### Macros
 
 * Use `#define` for constants.
 * Use `#define` for macros.
 * Protect macros using parentheses
+
 ```c
 #define MY_MACRO(x) ((x) + 1)
 ``` 
 
 * Protect macros using do-while
+
 ```c
 #define MY_MACRO(x) do { \
     (x) = (x) + 1; \
@@ -366,6 +366,8 @@ forever {
     }
 ```
 
+
+
 ### Binary operations
 
 * Swap two variables
@@ -382,10 +384,10 @@ forever {
 #define SWAP(a, b) (((a) ^ (b)) && ((b) ^= (a) ^= (b), (a) ^= (b)))
 ```
 
-### Strings 
+### Strings
 
-* ToLower 
-    
+* ToLower
+
 ```c
 #define TOLOWER(c) ((c) | 0x20)
 /* 0x20 = 0010 0000  = 32 */
@@ -415,7 +417,20 @@ forever {
 #define TOUPPER(c) ((c) & '_')
 ```
 
+* bool to string
 
+```c
+#define bool_to_str(x) (&"true\0false"[5*!(x)])
+
+/* or */
+#define bool_to_str(x) ((x) ? "true" : "false")
+```
+
+* go to the end of a string
+
+```c
+while(*(++str) != '\0');
+```
 
 ## Inspiration
 
